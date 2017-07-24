@@ -1,0 +1,21 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+
+  .navbar__wrap {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    color: #fff;
+
+    .logo {
+      font-weight: 300;
+    }
+
+    .navbar__link {
+      font-weight: 300;
+      margin-left: 20px;
+    }
+  } 
+}

@@ -1,0 +1,22 @@
+@import 'colours';
+// 
+// Button Styling
+// 
+
+// Standard outline button
+
+button {
+  color: $blue;
+  border: 1px solid $blue;
+  background: #fff;
+  padding: 12px 24px;
+  transition: color 0.68s, background 0.3s;
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+
+  &:hover {
+    background: $blue;
+    color: #fff;
+  }
+}
