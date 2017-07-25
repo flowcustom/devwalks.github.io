@@ -4,7 +4,7 @@
   position: fixed;
   z-index: 1000;
   width: 100%;
-  background: $blue;
+  background: rgba(39, 39, 39, 0.8);
 
   .navbar__wrap {
     margin: 20px 0;
@@ -25,7 +25,8 @@
     .navbar__link {
       color: #fff;
       margin-left: 20px;
-      transition: color 0.68;
+      transition: color 0.68s;
+      font-size: 16px;
 
       &:hover {
         color: $orange;

@@ -105,7 +105,6 @@ You now have a brand new, empty repository!
 
 Commit your current progress (your new project) by running:
 {% highlight ruby %}
--language-ruby
 git add . #To add all changed files
     
 git commit –m 'Initial commit' #To commit your changes with a message
