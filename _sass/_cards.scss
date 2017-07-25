@@ -13,12 +13,12 @@
 .card--hero {
   padding: 40px 60px;
   margin: 0 0 120px;
-  width: 620px;
+  width: 68%;
   box-shadow: 0 24px 24px 0 rgba(0,0,0,0.20);
   transition: box-shadow 0.68s;
 
   h1 {
-    margin: 0 0 20px;
+    margin: 0 0 40px;
     font-size: 2.8rem;
     line-height: 3rem;
   }
@@ -39,5 +39,8 @@
   &:hover {
     text-decoration: none;
     color: $blue;
+    p {
+      color: $blue;
+    }
   }
 }

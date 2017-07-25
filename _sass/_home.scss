@@ -2,7 +2,141 @@
 // Hero Section
 
 .home-hero {
-  background: url('/assets/img/home-hero-bg.png') center center;
+  background: url('/assets/img/home-hero-bg.png') fixed;
   background-size: cover;
+  background-position: fixed;
   padding: 120px 0 200px;
+}
+
+.home-section {
+  padding: 120px;
+}
+
+.process-section {
+  background: $light-grey;
+}
+
+.process-grid {
+  display: flex;
+
+  .process-item {
+    flex: 1;
+    margin-right: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+.heading-icon-group {
+  display: flex;
+  flex-direction: row;
+
+  img {
+    margin-left: 15px;
+  }
+}
+
+.home-why {
+  h4, p {
+    color: #fff;
+    text-align: center;
+  }
+
+  h4 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 0.8em;
+    font-weight: 300;
+  }
+
+  .card {
+    background: $blue;
+    width: 200px;
+    margin-bottom: 30px;
+    padding: 30px 10px;
+    cursor: default;
+
+    &:hover {
+      background: $orange;
+    }
+  }
+}
+
+.home-compare {
+  background: $light-grey;
+
+  .compare-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    h3, h2 {
+      font-weight: 100;
+    }
+
+    .standard-column {
+      flex: 1;
+      margin-right: 30px;
+    }
+
+    .devwalks-column {
+      flex: 1;
+      margin-left: 30px;
+    }
+
+    .devwalks-column.title-column {
+      margin-left: 151px;
+    }
+
+    .vs-column img {
+      width: 121px;
+    }
+  }
+}
+
+.home-contact {
+  background-image: linear-gradient(-214deg, #83A6F6 0%, #364DA8 100%);
+
+  .form, .info {
+    flex: 1
+  }
+
+  .info {
+    margin-left: 30px;
+
+    p {
+      margin-bottom: 18px;
+      font-weight: 300;
+    }
+  }
+}
+
+.home-blog {
+  background: $light-grey;
+
+  .flex-row {
+    justify-content: space-between;
+  }
+
+  .blog-preview {
+    width: 280px;
+    padding: 20px;
+    text-decoration: none;
+    color: $body;
+    transition: box-shadow 0.68s, color 0.3s;
+
+    p {
+      margin-top: 20px;
+      font-weight: 300;
+      color: $grey;
+    }
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  
 }

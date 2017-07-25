@@ -13,3 +13,14 @@
   display: flex;
   justify-content: space-between;
 }
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.flex-columns {
+  display: flex;
+  flex-direction: column;
+}

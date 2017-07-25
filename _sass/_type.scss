@@ -1,9 +1,22 @@
+@import 'colours';
 
 .white {
   color: #fff;
 }
 
+.blue {
+  color: $blue;
+}
+
+.centered {
+  text-align: center;
+}
+
 .description {
   font-weight: 300;
   color: #9B9B9B;
+}
+
+.italics {
+  font-style: italic;
 }

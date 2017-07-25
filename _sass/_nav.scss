@@ -1,21 +1,36 @@
+@import 'colours';
+
 .navbar {
   position: fixed;
+  z-index: 1000;
   width: 100%;
+  background: $blue;
 
   .navbar__wrap {
-    margin-top: 10px;
+    margin: 20px 0;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     color: #fff;
+    font-weight: 300;
 
     .logo {
-      font-weight: 300;
+      color: #fff;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
 
     .navbar__link {
-      font-weight: 300;
+      color: #fff;
       margin-left: 20px;
+      transition: color 0.68;
+
+      &:hover {
+        color: $orange;
+        text-decoration: none;
+      }
     }
   } 
 }
