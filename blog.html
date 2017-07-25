@@ -1,0 +1,24 @@
+---
+layout: default
+title: "Blog"
+permalink: /blog/
+---
+
+<div class="blog-index-header">
+  <div class="container">
+    <h1 class='white'>Devwalks Blog</h1>
+  </div>
+</div>
+<div class="blog-index-posts">
+  <div class="container">
+    <div class="flex-row">
+      {% for post in site.posts %}
+        <a href="{{ post.url }}" class="card blog-preview">
+          <sub>{{ post.excerpt }}</sub>
+          <h4>{{ post.title }}</h4>
+          
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>

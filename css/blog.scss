@@ -1,5 +1,4 @@
 ---
-# Process me!
 ---
 
 @import "colours";
@@ -18,6 +17,11 @@ body {
   font-size: 1.8rem;
   line-height: 1.75em;
   color: #3A4145;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
 }
 
 .blog-post {

@@ -119,24 +119,22 @@
   .flex-row {
     justify-content: space-between;
   }
+}
 
-  .blog-preview {
-    width: 280px;
-    padding: 20px;
-    text-decoration: none;
-    color: $body;
-    transition: box-shadow 0.68s, color 0.3s;
+.blog-preview {
+  width: 280px;
+  padding: 20px;
+  text-decoration: none;
+  color: $body;
+  transition: box-shadow 0.68s, color 0.3s;
 
-    p {
-      margin-top: 20px;
-      font-weight: 300;
-      color: $grey;
-    }
-
-    &:hover {
-      color: $blue;
-    }
+  p {
+    margin-top: 20px;
+    font-weight: 300;
+    color: $grey;
   }
 
-  
+  &:hover {
+    color: $blue;
+  }
 }

@@ -1,0 +1,27 @@
+@import "colours";
+
+.blog-index-header {
+  background: url('/assets/img/home-hero-bg.png') fixed;
+  background-size: cover;
+  background-position: fixed;
+  padding: 120px 0 80px;
+}
+
+.blog-index-posts {
+  background: $light-grey;
+  padding: 100px 0;
+
+  .flex-row {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+  }
+
+  a.blog-preview {
+    margin-bottom: 30px;
+
+    &:hover h4, &:hover p {
+      text-transform: none;
+    }
+  }
+}
