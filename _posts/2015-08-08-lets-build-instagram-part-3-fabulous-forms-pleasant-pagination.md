@@ -229,6 +229,7 @@ And, the associated scss:
 ```
 
 The rest of the styling is shared with the scss above ;)
+
 ___
 
 Look good?  You bet your ass it does.  Now, onto...
@@ -250,6 +251,7 @@ Good luck you crazy thing.
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 Alright, we've got a few bits to this puzzle but it's much simpler than using Dropzone / jQuery.  First, here's our new view file, found at ```app/views/posts/_form.html.haml```:
 
 ```haml
@@ -322,6 +324,7 @@ It's your turn to take the reigns.
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 Ok, here's how I implemented the fix.  First, I deleted the image\_tag from the ```edit.html.haml``` view that was handling our original preview functionality.  The ```edit.html.haml``` file now looks like:
 
 ```haml
@@ -431,6 +434,7 @@ This is all well and good but we don't want our users to manually input paramete
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 So you clicked that link and did it yourself right?  Of course, of course, I'm sorry I questioned your honesty.
 
 Jump into you ```index.html.haml``` view and adjust the file so it looks like this:
@@ -443,6 +447,7 @@ Jump into you ```index.html.haml``` view and adjust the file so it looks like th
 ```
 
 Could it be any easier?  Probably not.  How good is kaminari?
+
 ___
 
 If you jump back into your index again, you should be able to click around on the page numbers and be taken to each. Whilst it's fantastic that we've implemented pagination and our server is no longer imploding, the user experience still isn't what I expect from a modern day web application.  I feel like it should be... *nicer*.
@@ -460,6 +465,7 @@ Go forth and create! If you want bonus points, maybe consider an 'infinite scrol
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 Here's how I implemented this feature, manual clicking style.  First, I slightly adjusted the index view and added a new partial (for the sake of AJAX).  Here's my updated ```index.html.haml```:
 
 ```language-haml
@@ -567,6 +573,7 @@ I want to quickly mention here, that this exact feature has had a lot to do with
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 Before I give you my solution, I want to tell you the issues I faced when implementing the 'show more comments' feature.  I moaned briefly about this above.
 
 - The index.  My god, what a pain.  You can't assign ```@comments``` in your controller of course because you're not dealing with a singular ```@post```. So how then, do you paginate your comments? If you call a standard ```remote: true``` AJAX event on a link or button, you're still going to have troubles accessing the specific post's comments.
@@ -687,6 +694,7 @@ It won't look great at the moment, so if you want to add some pizazz, add the fo
   }
 }
 ```
+
 ___
 
 The above process seems complex for what seemed initially to be a simple feature but it really *isn't* so complex.  The flow is simply this:

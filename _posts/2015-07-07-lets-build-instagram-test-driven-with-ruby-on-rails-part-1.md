@@ -62,10 +62,12 @@ First create your rails project where you desire.
 ![Your turn](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 Jump on in your terminal and write the following:
 ```ruby
 rails new Photogram
 ```
+
 ___
 
 And that’ll do for the moment!
@@ -162,13 +164,16 @@ First, we need our root route to actually *point to something*.  That something 
 Generate the posts controller in your terminal now.
 
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
+
 **C’mon, you didn’t even refer to the last article, did you!?!**
 
 Run the below in your terminal
 ```bash
 bin/rails g controller posts
 ```
+
 ___
 
 *Nice.*
@@ -176,13 +181,16 @@ ___
 Now navigate to your new ```posts_controller.rb``` file and create an empty index action within that controller.
 
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
+
 Remember it needs to be empty... just like my heart...
 
 ```ruby
 def index
 end
 ```
+
 ___
 
 We’re going to need to create a view for this controller action.  Within ```app/views/posts/``` create a new file called index.html.erb OR index.html.haml.  I’m personally going to use haml from now on so you may have to translate (it’s super easy).  If you decide to use haml, you’re going to have to install the gem in your gemfile and run the ```bundle``` command in the terminal.  [Haml docs are here](https://github.com/haml/haml).
@@ -192,11 +200,13 @@ Within that new view file, I’m just going to create a h1 tag with the word "Ph
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 My ```index.html.haml``` file at this point looks exactly like this:
 
 ```haml
 %h1 Photogram
 ```
+
 ___
 
 Last but not least, to get past this error, we need to point our root route to this index action.  Jump into your ```config/routes.rb``` file and point your root route to your index!
@@ -204,12 +214,14 @@ Last but not least, to get past this error, we need to point our root route to t
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 **Alright, let me show you.**
 
 In your routes.rb file include the following:
 ```ruby
 root  'posts#index'
 ```
+
 ___
 
 ### Run rspec in terminal again.
@@ -235,6 +247,7 @@ How about we create the link first and see what happens.  Use the link\_to metho
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 **link\_to? Who are you?  Are you coo?**
 
 Below your h1 tag, add the following:
@@ -243,6 +256,7 @@ Below your h1 tag, add the following:
 ```
 
 *I’m **so** sorry about that rhyme.*
+
 ___
 
 ### Re-run rspec in terminal.
@@ -265,10 +279,12 @@ Oh yeah, we don’t have any of the routes in our posts controller identified!  
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 In routes.rb, add:
 ```ruby
 resources :posts
 ```
+
 ___
 
 ### Re-run rspec!
@@ -292,6 +308,7 @@ No action 'new' in our PostsController?  No problemo.  In fact, I think you can 
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 **Show me, I don’t trust my own brain.**
 
 You should, it’s a nice brain.  The empty new action in your posts controller should look like this:
@@ -300,6 +317,7 @@ You should, it’s a nice brain.  The empty new action in your posts controller 
 def new
 end
 ```
+
 ___
 
 ### RSPEC TIME!
@@ -313,7 +331,9 @@ And the next error claims that there’s no template! You know how to fix that! 
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 In ```app/views/posts``` create a new.html.haml or new.html.erb file.
+
 ___
 
 ### RUN THAT RSPEC COMMAND
@@ -338,7 +358,9 @@ Of course it fails, we don’t have a form!  Let’s install the [simple\_form g
 All done?  Alright, as per their docs, let’s create our (simple) form.
 
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
+
 In your new view, add the following:
 
 ```haml
@@ -347,6 +369,7 @@ In your new view, add the following:
   = f.input :caption
   = f.button :submit
 ```
+
 __
 
 And now it’s...
@@ -388,6 +411,7 @@ And shortly after, once your terminal stops doing it’s thing, migrate your dat
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 **Don’t know how?**
 
 You aren’t reading my articles are you?  Run the following in your terminal.
@@ -395,6 +419,7 @@ You aren’t reading my articles are you?  Run the following in your terminal.
 ```ruby
 bin/rake db:migrate
 ```
+
 ___
 
 Now let’s take care of that pesky instance variable that’s holding up our progression.  Are you noticing how BDD is like a guide in itself?  It tells you what to do, you just have to interpret the errors!
@@ -404,6 +429,7 @@ Head on back to your posts\_controller.rb file and add an instance variable call
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 **You just need to believe in yourself...**
 
 ```ruby
@@ -411,6 +437,7 @@ def new
   @post = Post.new
 end
 ```
+
 ___
 
 ### AND IT’S RSPEC TIME!
@@ -435,6 +462,7 @@ Do your best to go through the process of installing Paperclip yourself and incl
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 **Read your articles Ben?  Over my dead body!**
 
 Wow, that’s harsh.  I guess I’ll explain the process here...
@@ -473,6 +501,7 @@ Last but not least, migrate your database with:
 ```ruby
 bin/rake db:migrate
 ```
+
 ___
 
 How good are these docs!
@@ -517,6 +546,7 @@ Add the following to your posts controller:
 ```
 
 This should make sense.  We're just defining the parameters we'll accept with the private post_params method. We're then creating a new Post object using those post_params.
+
 ___
 
 ## RSPEC TIME!
@@ -540,6 +570,7 @@ It seems Rspec is taking issue with us not having a template for our create acti
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 My solution is below.  Rails knows that the @post in this scenario is our newly created post!
 
 ```ruby
@@ -548,6 +579,7 @@ def create
   redirect_to @post
 end
 ```
+
 ___
 
 **RSPEC RUNNING TIME**
@@ -568,11 +600,13 @@ We should know how to make an action in our controller by now.  Create a show ac
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 ```ruby
 def show
   @post = Post.find(params[:id])
 end
 ```
+
 ___
 
 ### RUN ARRRRR SPEC!
@@ -596,6 +630,7 @@ You know what to do right?  Create a new view for our show action!
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 As per usual I’m going to haml it up.  In my posts/views folder I’m going to create a new file called ```show.html.haml```.
 
 Try to get some logic in that view to display our new image and caption.  My version is below.
@@ -606,6 +641,7 @@ Try to get some logic in that view to display our new image and caption.  My ver
 ```
 
 I’ve used the Rails’ image_tag helper to actually display the image, rather than just show the url (which is what would happen if we just called @post.image).
+
 ___
 
 ### YOU’D BETTER RUN RSPEC AGAIN BECAUSE...
@@ -641,6 +677,7 @@ Using your new-found Rspec powers, write a test for the above pseudo-code.  Refe
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 **You did it yourself didn’t you!  I knew you could do it!**
 
 Here’s my version just incase you don’t completely trust yourself.
@@ -654,6 +691,7 @@ it 'needs an image to create a post' do
   expect(page).to have_content('Halt, you fiend! You need an image to post here!')
 end
 ```
+
 ___
 
 Run that bad boy in your terminal with your rspec command of choice.
@@ -681,7 +719,9 @@ Let’s stop them from posting first and then we’ll alert them.
 In your Post.rb model file, add a validation that requires the image field to be present.
 
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
+
 Compare your validation in your Post.rb model to mine below:
 
 ```ruby
@@ -693,6 +733,7 @@ class Post < ActiveRecord::Base
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 end
 ```
+
 ___
 
 Run your test again to see what it’s complaining about now.
@@ -718,6 +759,7 @@ If the user’s post is saved, let them know about it and redirect them to the p
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 If and else, my good friends.  Our create action within the controller can now look like this:
 ```ruby
   def create
@@ -755,6 +797,7 @@ module ApplicationHelper
   end
 end
 ```
+
 ___
 
 Ok, we’ve implemented the logic in our controller and added the ability to display our flash messages in our views.  Rerun your tests now.
@@ -825,6 +868,7 @@ Using the past few tests we’ve written as guides, try to create the viewing po
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 This is how I’ve written the test, notice the use of factories to create posts at the top.
 
 ```ruby
@@ -843,6 +887,7 @@ feature 'Index displays a list of posts' do
 end
 
 ```
+
 ___
 
 Run your test meow.
@@ -942,6 +987,7 @@ I believe in you, you big, beautiful apprentice developer.
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 Hey, I believed in you!  Oh, you’re just checking?  Good, good.
 
 ```ruby
@@ -974,6 +1020,7 @@ Think back to our first spec ```creating_new_posts_spec.rb```.  Both tests withi
 Genius!
 
 The next little trick is that we’re finding a <a> element within our index that contains the path for the post we created with factory_girl and clicking it using capybara.  This is a simple way for replicating how we want our application to behave for an actual human being.  It looks a little messy simply because it’s a bit tricky to find the exact element to click on when using an image.
+
 ___
 
 Guess what?  It’s your turn again.
@@ -1017,6 +1064,7 @@ it "won't update a post without an image" do
   expect(page).to have_content("Something is wrong with your form!")
 end
 ```
+
 ___
 
 Go ahead and make this feature work now.  Refer back to the original post *and* the new/create action in your current controller.  Those actions behave in a very similar way.
@@ -1047,6 +1095,7 @@ Convert that to a new spec my friend!  Call this new spec ```deleting_posts_spec
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 This is getting easy right?  Writing tests isn’t as awful or daunting is it?  Of course not!
 
 Here’s what my spec looks like based on the above requirements:
@@ -1071,6 +1120,7 @@ feature 'Deleting posts' do
   end
 end
 ```
+
 ___
 
 Once again, go do your thing!  You can now run rspec, get an error, fix the error and run rspec again!

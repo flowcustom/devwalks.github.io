@@ -61,6 +61,7 @@ Below my test code below, I’ll quickly run through the steps you can expect to
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 My spec:
 
 ```ruby
@@ -82,6 +83,7 @@ feature 'Creating a new user' do
   end
 end
 ```
+
 ___
 
 Now that you have your test written, run rspec in your terminal to see what steps you need to take to implement our new feature.  
@@ -119,6 +121,7 @@ Implement it yourself, it’s very similar to our first test above!
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 ```ruby
   scenario 'requires a user name to successfully create an account' do
     fill_in 'Email', with: 'sxyrailsdev@myspace.com'
@@ -129,6 +132,7 @@ ___
     expect(page).to have_content("can't be blank")
   end
 ```
+
 ___
 
 ###RSPEC TIME!
@@ -160,6 +164,7 @@ Guess what?  It’s your turn!
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 My Rspec code:
 
 ```ruby
@@ -173,6 +178,7 @@ My Rspec code:
     expect(page).to have_content('minimum is 4 characters')
   end
 ```
+
 ___
 
 ###RSPEC TIME!
@@ -189,6 +195,7 @@ Implement this yourself now (no pseudo code provided, you’re great at this now
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 Here’s my implementation.
 
 ```ruby
@@ -202,6 +209,7 @@ Here’s my implementation.
     expect(page).to have_content("maximum is 12 characters")
   end
 ```
+
 ___
 
 ###RSPEC TIME!
@@ -223,6 +231,7 @@ Let’s create the factory now.  No, wait.  Do you remember how to create a defa
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 Devise should’ve been nice enough to create a User factory for you under the ```spec/factories``` folder. If not, create a new file called ```users.rb``` now within that same folder.  Your factory should looks something like the below, feel free to customise the fields though, I assure you 'Arnie' isn’t compulsory.
 
 ```ruby
@@ -235,6 +244,7 @@ FactoryGirl.define do
   end
 end
 ```
+
 ___
 
 Brilliant!  What does this mean?  Well, it means we don’t have to manually create a user every single test by clicking around the place and entering data into fields.  We can just throw our ```user = create :user``` code in a background block in our test and we then have a user to work with! We’ll still have to login though.
@@ -273,6 +283,7 @@ Not too hard, right?  Your turn now, turn this into a beautiful feature spec!
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 ```ruby
 require 'rails_helper'
 
@@ -295,6 +306,7 @@ feature 'User authentication' do
   end
 end
 ```
+
 ___
 
 ###RSPEC TIME! 
@@ -326,6 +338,7 @@ Convert this now.
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 ```ruby
   scenario 'can log out once logged in' do
     visit '/'
@@ -338,6 +351,7 @@ ___
     expect(page).to have_content('Signed out successfully.')
   end
 ```
+
 ___
 
 ### RSPEC TIME!
@@ -374,6 +388,7 @@ Try to translate this pseudo-code into our spec now.
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 ```ruby
   scenario 'cannot view index posts without logging in' do
     visit '/'
@@ -385,6 +400,7 @@ ___
     expect(page).to have_content('You need to sign in or sign up before continuing.')
   end
 ```
+
 ___
 
 ### RSPEC TIME! 
@@ -444,6 +460,7 @@ Go on, implement it yourself now!  You’ll have to adjust 5 older specs but it�
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 Here’s my updated ```creating_posts_spec.rb```.
 
 ```ruby
@@ -581,6 +598,7 @@ feature 'viewing individual posts' do
   end
 end
 ```
+
 ___
 
 Wait a second, we’re logging in so much during our tests, surely we can clear this up a little?  
@@ -668,6 +686,7 @@ We want to adjust our spec so that users who didn’t create a specific post can
  ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 Here’s my new spec!
 
 ```ruby
@@ -719,6 +738,7 @@ feature 'editing posts' do
   end
 end
 ```
+
 ___
 
 What have we got here?
@@ -1005,6 +1025,7 @@ Pretty simple, right?  Create a new spec file under the features folder called `
  ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 Here’s my creating comment spec!
 
 ```ruby
@@ -1022,6 +1043,7 @@ feature 'Creating Comments' do
   end
 end
 ```
+
 ___
 
 Now that you’ve got a spec to run, it’s time to build out this feature!  Remember, refer to the [original non-tested version](http://www.devwalks.com/lets-build-instagram-with-rails-like-me-and-tell-me-im-beautiful/) for reference when required!
@@ -1078,6 +1100,7 @@ We’ll ensure that users can’t delete comments belonging to others soon, but 
  ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 Here’s my spec:
 
 ```ruby
@@ -1099,6 +1122,7 @@ feature 'Deleting comments' do
   end
 end
 ```
+
 ___
 
 
@@ -1127,6 +1151,7 @@ Your turn now, transform that pseudo-code into another scenario within that same
  ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 Well, here’s my whole spec file below to get some extra context.  I’ve added another comment to my background block so that we now have two comments on that post, each one belonging to each user.
 
 ```ruby
@@ -1159,6 +1184,7 @@ feature 'Deleting comments' do
   end
 end
 ```
+
 ___
 
 ### RSPEC TIME!
@@ -1186,6 +1212,7 @@ Write up the scenario now.  You might have to google how to send specific reques
  ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 Here’s my new scenario only:
 ```ruby
   scenario 'user cannot delete a comment not belonging to them via urls' do
@@ -1196,6 +1223,7 @@ Here’s my new scenario only:
     expect(page).to have_content('You guys are too kind xo')
   end
 ```
+
 ___
 
 ### RSPEC TIME!

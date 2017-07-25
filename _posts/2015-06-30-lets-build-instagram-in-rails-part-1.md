@@ -49,18 +49,24 @@ Jump in your terminal and cd to where you want to create your project.
 Now use the rails command for creating a new project and we can begin with style.
 
 ![Your Turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
+
 Can’t remember how to create a project in the terminal?
 {% highlight ruby %}
 
 rails new Photogram
 
 {% endhighlight %}
+
 ___
+
 Now cd to your new directory and let’s run the server to see if we’ve got rails working properly.
 
 ![Your Turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
+
 Can’t remember how to run a rails server?
 {% highlight ruby %}
 
@@ -74,7 +80,9 @@ bin/rails server
 
 {% endhighlight %}
 Use the first option if you want to be a super-efficient bad ass.
+
 ___
+
 You should see this screen as a friendly reminder that you’re awesome:
 
 ![Standard Rails Screen](/content/images/2015/06/Screen-Shot-2015-06-28-at-11-18-16-am.png)
@@ -91,7 +99,9 @@ This part of the guide will deal with handling the base of Photogram, the creati
 First, initiate your git repository in your current directory and commit your project thus far using the message "Initial commit".
 
 ![Your Turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
+
 ***Git what?***
 
 You should already have git installed on your machine, if not, look [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).  To run the init command, make sure you’re in the project directory on your development machine and run the following command:
@@ -110,7 +120,9 @@ git add . #To add all changed files
 git commit –m 'Initial commit' #To commit your changes with a message
 
 {% endhighlight %}
+
 ___
+
 Every time you see the git symbol in this guide, you should consider a commit.  I’m not going to push the matter because you’re an adult and you know best.
 
 ![Git!](/content/images/2015/06/Octocat-2.png)
@@ -126,17 +138,23 @@ To remedy the situation, we’re going to need to create a controller that will 
 Let’s generate a controller and call it posts.  Do that now in your terminal.
 
 ![Your Turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
+
 **Need a hand, friend?**
 {% highlight ruby %}
 
 bin/rails g controller posts
 
 {% endhighlight %}
+
 ___
+
 Now, let’s navigate over to our newly created controller posts_controller.rb and add a controller action.  First, let’s create our index action with no contents.
 ![Your Turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
+
 **Need another hand?**
 {% highlight ruby %}
 
@@ -144,11 +162,15 @@ def index
 end
 
 {% endhighlight %}
+
 ___
+
 Our routes for our posts controller are going to be standard Rails RESTFUL routes.  Rails let’s us simplify the routing in this scenario by using "resources".  Create a resources route for the posts controller in your routes.rb file now.
 
 ![Your Turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
+
 **Resource Shmesource**
 
 That is terrible English.  Just awful. Insert the below into you routes.rb file.
@@ -158,7 +180,9 @@ That is terrible English.  Just awful. Insert the below into you routes.rb file.
 resources :posts
 
 {% endhighlight %}
+
 ___
+
 Rails is going to want you to have a view associated with our brand new index action.  Do that now by  creating a new view called index under the posts folder at app/views/posts.  
 
 I’m a fan of using HAML instead of the standard erb format but this is entirely optional ( I honestly do believe it’s worth your time learning though).  If using HAML, call your file index.html.haml, otherwise call it index.html.erb.
@@ -176,7 +200,9 @@ Haml version:
 Now we have a functional index view, let's set the index action in the PostsController to be our root route within routes.rb.  
 
 ![Your Turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
+
 Add the following line to your routes.rb file.
 
 {% highlight ruby %}
@@ -184,7 +210,9 @@ Add the following line to your routes.rb file.
 root 'posts#index'
 
 {% endhighlight %}
+
 ___
+
 Load up your server again, navigate to the root route and gaze upon the beauty that is your application.  This is our MVP (just kidding).  Isn't she beautiful?
 
 No it's not, it's awful.
@@ -196,7 +224,9 @@ No it's not, it's awful.
 We’re going to need to generate a model in terminal to store our posts, including caption and image.  Let’s create the model “post” with only a string column for “caption”.  We’ll add the image functionality in a moment.
 
 ![Your Turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
+
 **Show me how, I dare not create a model all by myself!**
 
 {% highlight ruby %}
@@ -204,17 +234,22 @@ ___
 bin/rails g model Post caption:string
 
 {% endhighlight %}
+
 ___
+
 Now that we’ve created the migration files for our database we need to migrate those changes.  Run the Rails db migrate command in your terminal.
 
 ![Your Turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
+
 **I forget stuff sometimes!**
 {% highlight ruby %}
 
 bin/rake db:migrate
 
 {% endhighlight %}
+
 ___
 
 ![Git!](/content/images/2015/06/Octocat-2.png)
@@ -226,7 +261,9 @@ Let’s now add the image uploading functionality through a super fabulous gem c
 If you don’t trust yourself, read the hidden section below but I implore you to do it yourself and continue without reading it.  If you run into trouble in the next step it’ll be a good exercise for you in troubleshooting!
 
 ![Your Turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
+
 **Please help with the Paperclips!**
 
 First things first, as per the docs, you’ll need imagemagick running on your development computer.  Set it up as per the instructions [here](http://www.imagemagick.org/script/binary-releases.php).
@@ -257,6 +294,7 @@ As per the docs (and a fantastic comment in the comments section) you'll also ne
 bin/rails g paperclip post image
 
 {% endhighlight %}
+
 ___
 
 How good are these docs!
@@ -302,7 +340,9 @@ Not sure how to add the image upload functionality?  I’ll give you a hint, go 
 If you’re still struggling, that’s ok, just do what you can and then read the answer below.  Create your new view under app/views/posts and call it new.html.erb or new.html.haml and build the form there.
 
 ![Your Turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
+
 **Oh god, Please tell me, how do I create the form with simple_form?**
 
 First you’ll need to add the simple_form gem to your gemfile as below:
@@ -313,11 +353,15 @@ gem 'simple_form', '~> 3.1.0'
 {% endhighlight %}
 
 Next run bundle in your terminal to incorporate it into your project. You may need to restart your server or it’ll potentially throw an error when you try to navigate to your form.
+
 ___
+
 Now you should be able to start creating your form in your new view!  Follow along with the simple\_form [docs](http://github.com/plataformatec/simple_form).
 
 ![Your Turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
+
 Here’s a haml example.  You should be able to translate this back to erb if required.
 
 {% highlight ruby %}
@@ -340,6 +384,7 @@ end
 {% endhighlight %}
 
 ___
+
 Now we have a form that we can view on our local server.  With your server running, navigate to localhost:3000/posts/new in order to look at your creation.  
 
 Even though it's ugly, I assure you it's very functional!
@@ -359,8 +404,10 @@ Hmmm, it’s asking for a template but we don’t really want to create a templa
 Let’s write some code that will save the data from the form to our database.  You’ve probably done this before but it’s easy to forget.
 
 ![Your Turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
- **Show me how!**
+
+**Show me how!**
 
 We want to use the create method on the Post model, using the data in our form for submission.
 {% highlight ruby %}
@@ -384,12 +431,15 @@ def post_params
 end
 
 {% endhighlight %}
+
 ___
 
 Now that the information is being saved in the create action, we need to redirect the user to somewhere useful.  Let’s send them back to the index action for the time being with the redirect_to method.
 
 ![Your Turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
+
 **What is this magic?**
 
 Add the following code to the bottom of your new action.
@@ -407,6 +457,7 @@ def create
 end
 
 {% endhighlight %}
+
 ___
 
 ![Git!](/content/images/2015/06/Octocat-2.png)
@@ -416,7 +467,9 @@ Alright, let’s try to submit the form again.  Navigate back to localhost:3000/
 Finally, we've avoided errors!  But wait, where the hell is your post?  Let’s quickly set it up now.  To make sure our post even exists, jump into your terminal and run your rails console.
 
 ![Your Turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
+
 **I forget how…**
 {% highlight ruby %}
 
@@ -438,6 +491,7 @@ post = Post.first
 {% endhighlight %}
 
 ___
+
 And look at what’s returned!  Our submitted post, complete with caption and image path! 
 
 Right then, now that we know that we're actually saving something, let’s get ALL of our posts that will be submitted now and in future onto our index path in a big beautiful stream of visual delight.
@@ -445,7 +499,9 @@ Right then, now that we know that we're actually saving something, let’s get A
 Create an instance variable under your index action that collects all of the posts in your Post model.  This will let us display all of our posts in our index view!
 
 ![Your Turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
+
 **Please explain this “variable”…**
 
 It’s easy peasy!  
@@ -459,11 +515,15 @@ def index
 end
 
 {% endhighlight %}
+
 ___
+
 Once you’ve done this, we want to iterate over each post in that collection and display it for our viewing pleasure.  We’ll need to do this in the index view.  Do your best to iterate this collection using a simple block, outputting the captions and the images.
 
 ![Your Turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
+
 A very simple haml version of this is seen here if you need a hand:
 {% highlight ruby %}
 
@@ -472,12 +532,15 @@ A very simple haml version of this is seen here if you need a hand:
   =post.caption
 
 {% endhighlight %}
+
 ___
 
 If we refresh our index, all we’re getting is a crappy image path on each post.  Let’s use rail’s image\_tag helper to actually output our image.  You can read up on it yourself [here](http://api.rubyonrails.org/classes/ActionView/Helpers/AssetTagHelper.html#method-i-image_tag) or you can see how to implement this the easy way below.
 
 ![Your Turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
+
 **I don’t trust your dodgy links, show me the easy way!**
 
 Replace post.image with the below line.
@@ -486,6 +549,7 @@ Replace post.image with the below line.
 =image_tag post.image.url(:medium)
 
 {% endhighlight %}
+
 ___
 
 ![Git!](/content/images/2015/06/Octocat-2.png)
@@ -507,13 +571,16 @@ Being able to show individual posts would be nice too but that can all wait beca
 Instagram has recently revamped their desktop site so I’m just going to do that.  BUT to make it easier I’m going to use the CSS framework, Bootstrap as my foundation.  Install the bootstrap gem [found here](https://github.com/twbs/bootstrap-sass) in your gemfile as per their docs.
 
 ![Your Turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
+
 You’re getting lazy.
 {% highlight ruby %}
 
 gem 'bootstrap-sass', '~> 3.3.5'
 
 {% endhighlight %}
+
 ____
 
 Make sure to run “bundle” in your terminal, follow the steps in their docs as far as adding lines to your application.css file (and renaming it to .scss) and adding a line to your application.js file.
@@ -719,6 +786,7 @@ def show
 end
 
 {% endhighlight %}
+
 ____
 
 Now let's fiddle with the image\_tag on our index view so that each image will link to the appropriate post!
@@ -726,6 +794,7 @@ Now let's fiddle with the image\_tag on our index view so that each image will l
 Combining image\_tag and link_to tags will be commonplace in your rails career, work out how to do it via google searches before cheating below.
 
 ![Your Turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
 
 Adjust your image tags to include the link_to helper.
@@ -734,6 +803,7 @@ Adjust your image tags to include the link_to helper.
 =link_to (image_tag post.image.url(:medium), class:'img-responsive'), post_path(post)
 
 {% endhighlight %}
+
 ___
 
 This will let us click our images in order to take us to the individual post.  This takes us one step closer to pure Instagram forgery. 
@@ -743,6 +813,7 @@ The only issue? We don't have a view for our show action.  Create one now that s
 ![Your Turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 It's so similar to the index!
 {% highlight ruby %}
 
@@ -759,6 +830,7 @@ It's so similar to the index!
       =link_to "Cancel", posts_path
 
 {% endhighlight %}
+
 ___
 
 ![Git!](/content/images/2015/06/Octocat-2.png)
@@ -776,7 +848,9 @@ We’re going to need a view with a form to update our post…..
 Give it a go yourself. Hint:  You’re going to need two extra actions in your posts controller and only a single view (It will look very similar to your new and create actions).  Refer to your old tutorials if you have to, it’ll be much more useful than me holding your hand through it.  
 
 ![Your Turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
+
 *But your hands are so moist...*
 
 Oh you.
@@ -817,6 +891,7 @@ end
 And last but not least, let’s create a view for our edit action along with a form.  Call this view edit.html.haml (or .erb) and ensure it's residing in the same location as your other post views.
 
 The form within this view will be exactly the same as that used in your new action, so copy and paste the form from your new view to your edit view.
+
 ___
 
 We have two shiny new actions in our posts controller and a brand spanking new form in our edit action. Before I continue though, I’d like to add an image to the edit view as well.
@@ -824,7 +899,9 @@ We have two shiny new actions in our posts controller and a brand spanking new f
 I simply want to display the existing image being used for the post.  Look at how you display your image in your index view and use the same method in your edit view to display it.
 
 ![Your Turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
+
 I just want to be sure I’m doing it right…
 
 It’s OK, I trust that you’re doing your best.  Simply add a centered div and an image_tag.
@@ -843,6 +920,7 @@ It’s OK, I trust that you’re doing your best.  Simply add a centered div and
       = f.button :submit, class: 'btn-success'
 
 {% endhighlight %}
+
 ___
 
 Oh yeah, we're going to need to link to our edit action from our show view, let's quickly add the following code to the bottom of our show view.
@@ -869,6 +947,7 @@ OK, but you should know that I’m not happy about it (I think you look great in
 Simply create a link on the edit page for now so all of our users can delete each-others posts at will (We’ll fix this later I promise, this is a terrible idea). Go forth and destroy!
 
 ![Your Turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
 
 First our destroy action in posts_controller.rb
@@ -1009,7 +1088,9 @@ First, let’s create the plan B if something goes wrong when submitting a form.
 Create a simple if / else statement in your create block that reads like this for your index.  If your post is successfully created, redirect to the index page, else render the new page.  Your update action will be similar but it’ll ask, if your post is successfully updated, redirect to the index page, else render the edit page.
 
 ![Your Turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
+
 What does this look like?
 
 {% highlight ruby %}
@@ -1040,6 +1121,7 @@ AND
 
 
 {% endhighlight %}
+
 ___
 
 We can implement 'flashes' into our layout/application.html.haml file with the following code :

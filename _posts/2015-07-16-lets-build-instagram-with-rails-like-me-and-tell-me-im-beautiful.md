@@ -50,6 +50,7 @@ Read it all?  Great!  Install it as per their instructions.  Add gem to gemfile,
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 We’re just warming up again for this article so let me walk you through the installation process. 
 
 Yes, I know you could’ve done it yourself.  No, I don’t think you’re silly.
@@ -149,6 +150,7 @@ To get our badass usernames working, we’re going to have to add a new column i
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 What did you find?  Did you even search?  Of course you did, I trust you unconditionally.
 
 Because you did a *very thorough* search, you might be there, sitting on that old chair of yours thinking, "Oh god, this is tricky", but fear not good friend, I’m here to re-reassure you that everything is going to be A-O.K.  Let’s make magic together.
@@ -327,6 +329,7 @@ At the top of your ```posts_controller.rb``` file add the before action.
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 **Oh come on, you can do this!**
 
 Just below the first line, add the before filter:
@@ -334,6 +337,7 @@ Just below the first line, add the before filter:
 ```ruby
 before_action :authenticate_user!
 ```
+
 ___
 
 All done?  Great.  Now jump back onto your running version of the app (or run ```bin/rails s``` in your terminal if it’s not already running) and navigate to the root route.  Can you see stuff?  Great, you’re logged in!  Try logging out now by clicking the link in your navbar.
@@ -377,6 +381,7 @@ We’re going to need to generate another migration for this purpose.  You know 
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 Solution time!  In your terminal, run the following:
 
 ```ruby
@@ -414,6 +419,7 @@ Want to be awesome and give it a go yourself?  Go ahead!  Maybe commit your chan
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 Adjust the code within the post controllers’ ```new``` and ```create``` actions.
 
 ```ruby
@@ -437,6 +443,7 @@ Adjust the code within the post controllers’ ```new``` and ```create``` action
 Make sense?  For the new action, we’re creating a new current_user.posts object for the sake of our form and in the create action, we’re creating that object using the post\_params and either saving it or not.
 
 Awesome.
+
 ___
 
 #### 4. Identify Yo Self
@@ -450,6 +457,7 @@ Replace "Ben Walker" (great name) in each post with the user name of the user wh
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 **How’d you go?**
 
 Here’s how I did it.
@@ -491,6 +499,7 @@ In the ```show``` view, create an if / else statement that compares the user id 
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 Did you have a win?  Here’s how I implemented this feature:
 
 ```ruby
@@ -505,6 +514,7 @@ Did you have a win?  Here’s how I implemented this feature:
 ```
 
 Pretty simple right?  If the user id of the post we’re looking at matches the user id of the currently logged in user, we’ll show you the 'Edit Post' path.  Otherwise?  Only 'cancel' for you I'm afraid.
+
 ___
 
 How secure is this implementation though?  If you haven’t tried already, log out and create another user.  Log in and then click on one of the posts that you’d created with the last user.
@@ -516,6 +526,7 @@ We can edit and delete other people’s posts!  Have a think about how you could
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 Here’s how I solved this problem.  First, I created a private method in the posts controller below the other two private methods.  It looks like this:
 
 ```ruby
@@ -534,6 +545,7 @@ before_action :owned_post, only: [:edit, :update, :destroy]
 ```
 
 So unless you meet the requirements set by the ```owned_post``` method, you’ll be redirected back to the root route with a nice little message *before* any of the actions in the controller are called.
+
 ___
 
 ![My post.](/content/images/2015/07/Screen-Shot-2015-07-16-at-10-37-09-pm.png)
@@ -574,6 +586,7 @@ Not sure about 'references'?  What a great time to perform some self-driven rese
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 **Need help hombre?**
 
 I generated my model by running the following code in my terminal:
@@ -600,6 +613,7 @@ Finally, jump into the ```app/models/user.rb``` and ```app/models/post/rb``` fil
 This means that both users and posts "have many" comments and finishes off creating our associations between the models!
 
 The dependent: destroy line means that if that object is destroyed, the associated objects will be destroyed too.  In practice, this’ll mean that if a User is destroyed, all of their associated comments will too.  If a Post is deleted, say "Goodbye" to the comments too!
+
 ___
 
 Now that our model / database table / associates are sorted, let’s add our comments as a 'nested route' within our posts.
@@ -617,6 +631,7 @@ resources :posts do
   resources :comments
 end
 ```
+
 ___
 
 Alright, so we’ve got somewhere to store our comments and we’ve got sensible routes too.  
@@ -628,11 +643,13 @@ Generate a new controller for the comments in your terminal now.
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 In your terminal, type:
 
 ```ruby
 bin/rails g controller comments
 ```
+
 ___
 
 Now that we have an empty controller, it’s time to add the actions that we want.  Let’s add a create action first.  Make it blank to start with, and then have a ponder about what logic we’d like to include in that action.  The feature will work like this.
@@ -646,6 +663,7 @@ Have a think about this will work and then try to implement the feature yourself
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 Well, here’s how my create action looks (as well as a bit more of the controller), it’s probably not as good as yours to be honest, you did a fantastic job just now.
 
 ```ruby
@@ -674,6 +692,7 @@ def set_post
   @post = Post.find(params[:post_id])
 end
 ```
+
 ___
 
 Make sense?  At the very top we run the set\_post before\_action which we can see at the bottom of the snippet in the private method area.  We’re just setting the ```@post``` instance variable to the post from the Post model based on the post\_id params. 
@@ -685,6 +704,7 @@ While we’re at it, let’s add a destroy method to our comments controller.  I
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 Below my create action, I have the following:
 
 ```ruby
@@ -708,6 +728,7 @@ Do you want to attack your own views and create this functionality?  I’ll be h
 ![Your turn!](/content/images/2015/06/YourTurn-1.png)
 
 ___
+
 My solution is below!  Please note I’ve allowed a spot here to actually show the comments for each post too.  I’m pretty sneaky like that.
 
 ```ruby
@@ -738,6 +759,7 @@ My solution is below!  Please note I’ve allowed a spot here to actually show t
           = form_for [post, post.comments.new] do |f|
             = f.text_field :content, placeholder: 'Add a comment...'
 ```
+
 ___
 
 A few things here.  First, I didn’t use simple\_form for this form because it wasn’t worth the hassle, it was much cleaner to use the standard Rails form\_for.  
