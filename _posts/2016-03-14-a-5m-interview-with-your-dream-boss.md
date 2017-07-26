@@ -4,6 +4,9 @@ layout: post
 permalink: /a-5m-interview-with-your-dream-boss-1/
 published: 14 March 2016
 category: tech
+feature_image: /assets/img/posts/dream-job-1-preview.png
+description: We chat with the owner of a well known development company to see what's required of self-taught developers
+id: 16
 ---
 <sub class='blog-date'>{{ page.published }}</sub>
 

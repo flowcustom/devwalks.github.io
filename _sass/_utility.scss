@@ -1,0 +1,8 @@
+@import "colours";
+
+.confetti-bg {
+  height: 100%;
+  background: url("/assets/img/home-hero-bg.png") fixed;
+  background-size: cover;
+  background-position: fixed;
+}

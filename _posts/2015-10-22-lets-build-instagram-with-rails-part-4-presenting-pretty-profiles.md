@@ -3,7 +3,10 @@ title: "Let's Build Instagram With Rails, Part 4: Presenting Pretty Profiles"
 layout: post
 permalink: /lets-build-instagram-with-rails-part-4-presenting-pretty-profiles/
 published: 22 October 2015
-category: tech
+category: tech instagram
+feature_image: /content/images/2015/10/Screen-Shot-2015-10-20-at-9-25-41-PM.png
+description: User profile pages in our Ruby on Rails Instagram clone
+id: 9
 ---
 <sub class='blog-date'>{{ page.published }}</sub>
 

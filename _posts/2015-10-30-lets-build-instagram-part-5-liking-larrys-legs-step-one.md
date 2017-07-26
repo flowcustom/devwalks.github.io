@@ -3,7 +3,10 @@ title: "Let’s Build Instagram Part 5 - Liking Larry’s Legs (Step One)"
 layout: post
 permalink: /lets-build-instagram-part-5-liking-larrys-legs-step-one/
 published: 30 October 2015
-category: tech
+category: tech instagram
+feature_image: /content/images/2015/11/ListingLikes.png
+description: Creating a 'like' system on our Ruby on Rails Instagram clone
+id: 10
 ---
 <sub class='blog-date'>{{ page.published }}</sub>
 

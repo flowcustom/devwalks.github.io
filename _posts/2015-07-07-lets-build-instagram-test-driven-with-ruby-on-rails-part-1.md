@@ -3,7 +3,10 @@ title: "Let's Build: Instagram (Test Driven with Ruby on Rails) - Part 1"
 layout: post
 permalink: /lets-build-instagram-test-driven-with-ruby-on-rails-part-1/
 published: 07 July 2015
-category: tech
+category: tech instagram
+feature_image: /content/images/2015/06/Screen-Shot-2015-06-28-at-11-32-14-am.png
+description: "Kickstart our test driven Instagram clone by creating posts with images"
+id: 4
 ---
 <sub class='blog-date'>{{ page.published }}</sub>
 

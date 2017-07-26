@@ -3,7 +3,10 @@ title: "Let's Build: Instagram with Ruby on Rails Part 7 - Follow all the people
 layout: post
 permalink: /lets-build-instagram-with-ruby-on-rails-part-6-follow-all-the-people/
 published: 17 February 2016
-category: tech
+category: instagram tech
+feature_image: /content/images/2016/02/profile-follow-button.png
+description: Implementing the friend system in our Ruby on Rails Instagram clone
+id: 14
 ---
 <sub class='blog-date'>{{ page.published }}</sub>
 

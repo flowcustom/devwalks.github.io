@@ -3,7 +3,10 @@ title: "Let's Build Instagram Part 3 -Fabulous Forms & Pleasant Pagination"
 layout: post
 permalink: /lets-build-instagram-part-3-fabulous-forms-pleasant-pagination/
 published: 08 August 2015
-category: tech
+category: tech instagram
+feature_image: /content/images/2015/08/newlogin.png
+description: Make our Instagram clone beautiful with some big styling updates & comment pagination
+id: 7
 ---
 <sub class='blog-date'>{{ page.published }}</sub>
 

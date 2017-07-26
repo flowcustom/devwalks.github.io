@@ -3,7 +3,10 @@ title: "BDD Handbook - Let's Build Instagram (with Rails) - Part 2"
 layout: post
 permalink: /bdd-handbook-lets-build-instagram-with-rails-part-2/
 published: 26 July 2015
-category: tech
+category: tech instgram
+feature_image: /content/images/2015/07/Screen-Shot-2015-07-16-at-11-23-20-pm.png
+description: Test driven user comments and authentication for our Instagram Ruby on Rails project
+id: 6
 ---
 <sub class='blog-date'>{{ page.published }}</sub>
 

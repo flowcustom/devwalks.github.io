@@ -3,6 +3,10 @@ title: "Let's Build: Instagram (With Ruby on Rails) - Part 1 - Just CRUD Things"
 layout: post
 published: 30 June 2015
 permalink: /lets-build-instagram-in-rails-part-1/
+categories: tech instagram
+feature_image: /content/images/2015/06/Screen-Shot-2015-06-28-at-11-32-14-am.png
+description: "Start building an Instagram clone by creating posts with images"
+id: 2
 ---
 <sub class='blog-date'>{{ page.published }}</sub>
 

@@ -3,7 +3,10 @@ title: "Let's Build: Instagram with Rails.  Log in and tell me I'm beautiful."
 layout: post
 permalink: /lets-build-instagram-with-rails-like-me-and-tell-me-im-beautiful/
 published: 16 July 2015
-category: tech
+category: tech instagram
+feature_image: /content/images/2015/07/Screen-Shot-2015-07-16-at-11-23-20-pm.png
+description: "Let's keep building by creating user authenticatoin and comments"
+id: 5
 ---
 <sub class='blog-date'>{{ page.published }}</sub>
 

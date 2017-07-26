@@ -3,6 +3,10 @@ title: "Stop Mucking Around, Learn to Code in 2016"
 layout: post
 published: 07 January 2016
 permalink: /stop-mucking-around-learn-to-code-in-2016/
+category: tech
+feature_image: /assets/img/posts/learn-to-code.png
+description: Learning to code is hard, but you need to perservere if it's what you really want
+id: 12
 ---
 <sub class='blog-date'>{{ page.published }}</sub>
 

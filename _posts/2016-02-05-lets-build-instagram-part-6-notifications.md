@@ -3,6 +3,10 @@ title: "Let's Build Instagram Part 6 - Notifications"
 layout: post
 published: 05 February 2016
 permalink: /lets-build-instagram-part-6-notifications/
+category: instagram tech
+feature_image: /content/images/2016/02/Screen-Shot-2016-02-05-at-12-35-50-PM.png
+description: A notifications sytem for our Ruby on Rails Instagram clone
+id: 13
 ---
 <sub class='blog-date'>{{ page.published }}</sub>
 

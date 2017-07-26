@@ -1,0 +1,43 @@
+@import "colours";
+
+.contact-us {
+  padding: 160px 0 100px;
+
+  h1 {
+    margin-bottom: 40px;
+  }
+
+  .form, .info {
+    flex: 1
+  }
+
+  .info {
+    margin-left: 30px;
+
+    p {
+      margin-bottom: 18px;
+      font-weight: 300;
+    }
+  }
+}
+
+.thank-you {
+  padding: 200px 0 100px;
+
+  h1 {
+    margin-bottom: 40px;
+  }
+}
+
+.case-studies {
+  padding: 160px 0 100px;
+
+  .studies-row {
+    flex-wrap: wrap;
+    margin-top: 40px;
+
+    .card {
+      margin-bottom: 30px;
+    }
+  }
+}
