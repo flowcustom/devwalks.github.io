@@ -26,11 +26,18 @@
   &:hover {
     box-shadow: 0 32px 24px 0 rgba(0,0,0,0.20);
   }
+
+  @media screen and (max-width: $break-large) {
+    width: 100%;
+    padding: 60px;
+    margin: 0 0 80px;
+  }
 }
 
 .card--link {
   width: 280px;
   color: $body;
+  flex-wrap: wrap;
 
   h3 {
     font-size: 2em;
@@ -43,4 +50,14 @@
       color: $blue;
     }
   }
+
+  @media screen and (max-width: $break-large) {
+    width: 240px;
+  }
+
+  @media screen and (max-width: $break-small) {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
+

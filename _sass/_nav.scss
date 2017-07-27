@@ -14,6 +14,10 @@
     color: #fff;
     font-weight: 300;
 
+    @media screen and (max-width: $break-large) {
+      padding: 0 30px;
+    }
+
     .logo {
       color: #fff;
 

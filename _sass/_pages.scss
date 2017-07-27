@@ -4,7 +4,13 @@
   background: url('/assets/img/home-hero-bg.png') fixed;
   background-size: cover;
   background-position: fixed;
-  padding: 120px 0 80px;
+  padding: 120px 30px 80px;
+
+  h1, h2 {
+    @media screen and (max-width: $break-small) {
+      text-align: center;
+    }
+  }
 }
 
 .grey-section {
@@ -13,7 +19,7 @@
 
 .blog-index-posts {
   background: $light-grey;
-  padding: 100px 0;
+  padding: 100px 30px;
 
   .flex-row {
     justify-content: space-between;
@@ -60,7 +66,7 @@
 }
 
 .case-studies {
-  padding: 160px 0 100px;
+  padding: 160px 30px 100px;
 
   .studies-row {
     flex-wrap: wrap;
@@ -73,7 +79,7 @@
 }
 
 .case-study-section {
-  padding: 100px 0;
+  padding: 100px 30px;
 
   p {
     margin-bottom: 1rem;
@@ -82,16 +88,28 @@
   .first-half {
     flex: 1;
     margin-right: 30px;
+
+    @media screen and (max-width: $break-large) {
+      width: 100%;
+      flex: none;
+      margin-right: 0;
+    }
   }
 
   .second-half {
     flex: 1;
     margin-left: 30px;
+
+    @media screen and (max-width: $break-large) {
+      width: 100%;
+      flex: none;
+      margin-left: 0;
+    }
   }
 }
 
 .case-study-image-section {
-  padding: 100px 0;
+  padding: 100px 30px;
   display: flex;
   align-items: center;
 
@@ -133,6 +151,29 @@
     margin-top: -300px;
     left: 0;
     position: absolute;
+  }
+
+  @media screen and (max-width: $break-large) {
+    display: block;
+
+    .first-half, .second-half {
+      width: 100%;
+    }
+
+    .first-half.text-half, .second-half.text-half {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .image-left, .image-right {
+      margin-top: 0;
+      display: block;
+      margin: 30px auto;
+      position: initial;
+      width: 100% !important;
+      height: 100% !important;
+    }
+
   }
 }
 
