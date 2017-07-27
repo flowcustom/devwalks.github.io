@@ -96,11 +96,10 @@
     margin-bottom: 50px;
 
     h3, h2 {
-      font-weight: 100;
+      font-weight: 300;
 
       @media screen and (max-width: $break-small) {
         text-align: center;
-        font-weight: 300;
       }
     }
 
