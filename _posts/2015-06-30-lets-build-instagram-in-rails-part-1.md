@@ -93,7 +93,8 @@ You should see this screen as a friendly reminder that you’re awesome:
 
 You are by the way ;)
 
-###CRUD!
+### CRUD!
+
  Let’s start building our application.  Remember, the TDD version of this is coming and I don't want you to risk being too incredible just now.  That and I want you to have a great foundation from which to learn to test.
 
 Let's be cowboy devs for the moment.
@@ -133,7 +134,7 @@ Every time you see the git symbol in this guide, you should consider a commit.  
 
 That's an octocat by the way.
 
-###Back to the build you fiend!
+### Back to the build you fiend!
 
 If you were test driving this application, the first thing it’d complain about is the simple fact that nothing of value exists at our root route (localhost:3000/ for the moment).  
 
@@ -223,7 +224,7 @@ No it's not, it's awful.
 
  We’ll get back to actually having something of value in our index but for the moment, let’s actually create some posts for our index (and therefore root route) to display.
 
-###First, a database!
+### First, a database!
 
 We’re going to need to generate a model in terminal to store our posts, including caption and image.  Let’s create the model “post” with only a string column for “caption”.  We’ll add the image functionality in a moment.
 
@@ -329,7 +330,7 @@ We can now officially handle image uploads, give yourself a high ten and commit 
 
 ![Git!](/content/images/2015/06/Octocat-2.png)
 
-###Out with the old in with the new action
+### Out with the old in with the new action
 
 Create a new empty action in your posts_controller.rb file called ‘new’, exactly the same as you did earlier with the index action.  
 
@@ -480,11 +481,15 @@ ___
 bin/rails c
 
 {% endhighlight %}
+
 ___
+
 Now try to find that post we submitted using your ruby and rails skills.
 
 ![Your Turn!](/content/images/2015/06/YourTurn-1.png)
+
 ___
+
 **I've lost all my Ruby skills in a freak water slide accident…**
 
 Let’s assign the very first post in the Post model to the variable “post”.
@@ -568,9 +573,9 @@ What an incredible achievement.  It’s not super functional yet though, I can�
 
 Being able to show individual posts would be nice too but that can all wait because I’m sick of this thing looking awful.
 
-###Styling: Let’s steal like an artist or something
+### Styling: Let’s steal like an artist or something
 
- Let’s blatantly steal from Instagram, for this is an Instagram clone tutorial after all!  
+Let’s blatantly steal from Instagram, for this is an Instagram clone tutorial after all!  
 
 Instagram has recently revamped their desktop site so I’m just going to do that.  BUT to make it easier I’m going to use the CSS framework, Bootstrap as my foundation.  Install the bootstrap gem [found here](https://github.com/twbs/bootstrap-sass) in your gemfile as per their docs.
 
@@ -770,7 +775,7 @@ Navigate to the new view if you haven’t already and admire your handy work.  I
 
 Let’s keep building the apps functionality now.
 
-###Show me a single post you silly application!
+### Show me a single post you silly application!
 
 Hey, you talk to Photogram nicely please.
 
@@ -841,7 +846,7 @@ ___
 
 Now you should have the ability to click one of your posts on the index and it should take you to the individual post!
 
-###Let me edit my posts, I’ve made a horrible mistake
+### Let me edit my posts, I’ve made a horrible mistake
 
 We all make mistakes but at least we can fix this one for you.  Take a moment and have a think about what we’re going to need to do to implement this.  In fact, you’ve probably done this before in your previous applications!
 
@@ -988,7 +993,7 @@ It’ll look like this, which is perfect!
 
 And it’s done!  Try deleting one of your pics now and see what happens.
 
-###Tidy tidy tidy
+### Tidy tidy tidy
 
 Basic functionality has been created, let’s clean up a little before we finish for the moment.
 
@@ -1173,7 +1178,7 @@ flash[:alert] = “Oh god something is wrong”
 
 ![Git!](/content/images/2015/06/Octocat-2.png)
 
-###The End (for a brief moment)
+### The End (for a brief moment)
 
 You have now created a great CRUD application that looks pretty snazzy, but we’re still missing a few things I’d like to see.  Users with authentication, comments and likes to be specific.  Maybe even a profile page for each user.
 
