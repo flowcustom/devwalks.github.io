@@ -240,3 +240,5 @@ We'll cover:
 Until then!
 
 Ben
+
+p.s. [Part 2 is now available! Click here to learn about project planning, scope and minimum viable products.]({% post_url 2017-08-17-lets-build-saas-planning %})
