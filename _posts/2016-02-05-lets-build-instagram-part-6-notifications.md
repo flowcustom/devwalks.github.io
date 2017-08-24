@@ -163,7 +163,7 @@ ___
 Here's my brand new ```create_notification``` method:
 
 ```ruby
-def create_notification(post)
+def create_notification(post, comment)
 	return if post.user.id == current_user.id 
     Notification.create(user_id: post.user.id,
                         notified_by_id: current_user.id,
