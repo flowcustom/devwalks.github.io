@@ -5,6 +5,7 @@ permalink: /lets-build-instagram-part-5-liking-larrys-legs-step-one/
 published: 30 October 2015
 category: tech instagram
 feature_image: /content/images/2015/11/ListingLikes.png
+thumbnail: https://res.cloudinary.com/devwalks/image/upload/c_scale,q_auto:eco,w_240/v1505180597/ListingLikes_rnlkz7.png
 description: Creating a 'like' system on our Ruby on Rails Instagram clone
 id: 10
 ---

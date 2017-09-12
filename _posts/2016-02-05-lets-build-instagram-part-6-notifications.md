@@ -5,6 +5,7 @@ published: 05 February 2016
 permalink: /lets-build-instagram-part-6-notifications/
 category: instagram tech
 feature_image: /content/images/2016/02/Screen-Shot-2016-02-05-at-12-35-50-PM.png
+thumbnail: https://res.cloudinary.com/devwalks/image/upload/c_scale,q_auto:eco,w_240/v1505180431/Screen-Shot-2016-02-05-at-12-35-50-PM_jniuwc.png
 description: A notifications sytem for our Ruby on Rails Instagram clone
 id: 13
 ---

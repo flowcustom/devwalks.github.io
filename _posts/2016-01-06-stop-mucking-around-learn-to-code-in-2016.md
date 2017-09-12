@@ -5,6 +5,7 @@ published: 07 January 2016
 permalink: /stop-mucking-around-learn-to-code-in-2016/
 category: tech
 feature_image: /assets/img/posts/learn-to-code.png
+thumbnail: https://res.cloudinary.com/devwalks/image/upload/c_scale,q_auto:eco,w_240/v1505179887/learn-to-code_iealt6.png
 description: Learning to code is hard, but you need to perservere if it's what you really want
 id: 12
 ---

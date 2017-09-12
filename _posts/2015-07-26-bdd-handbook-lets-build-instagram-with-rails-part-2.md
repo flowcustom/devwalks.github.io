@@ -5,6 +5,7 @@ permalink: /bdd-handbook-lets-build-instagram-with-rails-part-2/
 published: 26 July 2015
 category: tech instgram
 feature_image: /content/images/2015/07/Screen-Shot-2015-07-16-at-11-23-20-pm.png
+thumbnail: https://res.cloudinary.com/devwalks/image/upload/c_scale,q_auto:eco,w_240/v1505180726/Screen-Shot-2015-07-16-at-11-23-20-pm_gsmymy.png
 description: Test driven user comments and authentication for our Instagram Ruby on Rails project
 id: 6
 ---

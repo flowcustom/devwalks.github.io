@@ -5,6 +5,7 @@ permalink: /lets-build-instagram-part-3-fabulous-forms-pleasant-pagination/
 published: 08 August 2015
 category: tech instagram
 feature_image: /content/images/2015/08/newlogin.png
+thumbnail: https://res.cloudinary.com/devwalks/image/upload/c_scale,q_auto:eco,w_240/v1505180692/newlogin_vkiys3.png
 description: Make our Instagram clone beautiful with some big styling updates & comment pagination
 id: 7
 ---

@@ -5,6 +5,7 @@ permalink: /lets-build-instagram-test-driven-with-ruby-on-rails-part-1/
 published: 07 July 2015
 category: tech instagram
 feature_image: /content/images/2015/06/Screen-Shot-2015-06-28-at-11-32-14-am.png
+thumbnail: https://res.cloudinary.com/devwalks/image/upload/c_scale,q_auto:eco,w_240/v1505180791/Screen-Shot-2015-06-28-at-11-32-14-am_hxz5zb.png
 description: "Kickstart our test driven Instagram clone by creating posts with images"
 id: 4
 ---

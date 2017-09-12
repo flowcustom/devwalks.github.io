@@ -5,6 +5,7 @@ published: 15 August 2017
 permalink: /lets-build-a-saas-startup-1/
 categories: saas business 
 feature_image: /assets/img/saas-part-one.png
+thumbnail: https://res.cloudinary.com/devwalks/image/upload/q_auto:eco/v1505179872/saas-part-one_qv3pds.png
 description: "You want to learn how to build new products? Lets build new products!"
 ---
 <sub class='blog-date'>{{ page.published }}</sub>

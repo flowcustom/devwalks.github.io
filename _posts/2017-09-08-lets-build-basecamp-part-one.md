@@ -5,6 +5,7 @@ published: 08 September 2017
 permalink: /ruby-on-rails-tutorial-lets-build-basecamp-1/
 categories: ruby-on-rails-tutorial basecamp
 feature_image: /assets/img/posts/basecamp-1/early-projects-index.png
+thumbnail: https://res.cloudinary.com/devwalks/image/upload/c_scale,q_auto:eco,w_240/v1505179890/early-projects-index_whbevw.png
 description: "Ruby on Rails Tutorial. Let's build Basecamp with Ruby on Rails 5.1!"
 id: 2
 ---

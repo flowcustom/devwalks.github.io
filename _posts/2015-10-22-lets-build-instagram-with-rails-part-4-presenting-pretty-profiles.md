@@ -5,6 +5,7 @@ permalink: /lets-build-instagram-with-rails-part-4-presenting-pretty-profiles/
 published: 22 October 2015
 category: tech instagram
 feature_image: /content/images/2015/10/Screen-Shot-2015-10-20-at-9-25-41-PM.png
+thumbnail: https://res.cloudinary.com/devwalks/image/upload/c_scale,q_auto:eco,w_240/v1505180651/Screen-Shot-2015-10-20-at-9-25-41-PM_dwwhlu.png
 description: User profile pages in our Ruby on Rails Instagram clone
 id: 9
 ---

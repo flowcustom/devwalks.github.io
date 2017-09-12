@@ -5,6 +5,7 @@ permalink: /lets-build-instagram-with-ruby-on-rails-part-6-follow-all-the-people
 published: 17 February 2016
 category: instagram tech
 feature_image: /content/images/2016/02/profile-follow-button.png
+thumbnail: https://res.cloudinary.com/devwalks/image/upload/c_scale,q_auto:eco,w_240/v1505180358/profile-follow-button_gncgwa.png
 description: Implementing the friend system in our Ruby on Rails Instagram clone
 id: 14
 ---

@@ -5,6 +5,7 @@ published: 17 August 2017
 permalink: /lets-build-a-saas-startup-2/
 categories: saas business 
 feature_image: /assets/img/posts/56928987.jpg
+thumbnail: https://res.cloudinary.com/devwalks/image/upload/c_scale,q_auto:eco,w_240/v1505179885/56928987_xiv2c1.jpg
 description: "Planning a Software Project & thinking about Minimum Viable Products"
 ---
 <sub class='blog-date'>{{ page.published }}</sub>

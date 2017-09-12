@@ -5,6 +5,7 @@ permalink: /a-5m-interview-with-your-dream-boss-1/
 published: 14 March 2016
 category: tech
 feature_image: /assets/img/posts/dream-job-1-preview.png
+thumbnail: https://res.cloudinary.com/devwalks/image/upload/c_scale,q_auto:eco,w_240/v1505179871/dream-job-1-preview_ytovvg.png
 description: We chat with the owner of a well known development company to see what's required of self-taught developers
 id: 16
 ---
