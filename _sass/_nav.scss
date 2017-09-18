@@ -1,10 +1,12 @@
 @import 'colours';
 
 .navbar {
-  position: fixed;
-  z-index: 1000;
   width: 100%;
-  background: rgba(39, 39, 39, 0.8);
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 
   .navbar__wrap {
     margin: 10px 0;
@@ -20,7 +22,7 @@
 
     .logo {
       color: #fff;
-      font-weight: 700;
+      font-weight: 500;
 
       &:hover {
         text-decoration: none;
@@ -32,6 +34,7 @@
       margin-left: 20px;
       transition: color 0.68s;
       font-size: 16px;
+      font-weight: lighter;
 
       &:hover {
         color: $orange;
@@ -39,4 +42,14 @@
       }
     }
   } 
+}
+
+.navbar--blog {
+  .navbar__wrap {
+    color: #2C2C2C;
+
+    .logo, .navbar__link {
+      color: #2C2C2C;
+    }
+  }
 }

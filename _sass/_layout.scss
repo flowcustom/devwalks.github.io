@@ -9,6 +9,20 @@
   margin: 0px auto;
 }
 
+.container-wide {
+  max-width: 95%;
+  margin: 0px auto;
+}
+
+.flex-50 {
+  flex: 1;
+  flex-grow: 0;
+}
+
+.page-content {
+  margin-top: -50px;
+}
+
 .grid {
   display: flex;
   justify-content: space-between;
@@ -18,8 +32,6 @@
 .flex-row {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
 }
 
 .space-between {

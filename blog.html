@@ -4,22 +4,24 @@ title: "Blog"
 permalink: /blog/
 ---
 
-<div class="confetti-header">
-  <div class="container">
-    <h1 class='white'>Devwalks Blog</h1>
-  </div>
-</div>
-<div class="blog-index-posts">
-  <div class="container">
-    <div class="flex-row">
-      {% for post in site.posts %}
-        <a href="{{ post.url }}" class="card blog-preview">
-          <img src="{{ post.thumbnail }}" alt="Post feature image" />
-          <sub>{{ post.excerpt }}</sub>
-          <h4>{{ post.title }}</h4>
-          <p>{{ post.description }}</p>
-        </a>
-      {% endfor %}
+<main class="page-content">
+  <div class="page-header">
+    <div class="container">
+      <h1 class='white'>Devwalks Blog</h1>
     </div>
   </div>
-</div>
+  <div class="blog-index-posts">
+    <div class="container">
+      <div class="flex-row">
+        {% for post in site.posts %}
+          <a href="{{ post.url }}" class="card blog-preview">
+            <img src="{{ post.thumbnail }}" alt="Post feature image" />
+            <sub>{{ post.excerpt }}</sub>
+            <h4>{{ post.title }}</h4>
+            <p>{{ post.description }}</p>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</main>

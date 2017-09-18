@@ -1,8 +1,10 @@
 @import "colours";
 
-.confetti-bg {
+.gradient-bg {
+  background-image: linear-gradient(45deg, #2E3192 0%, #1BFFFF 100%);
   height: 100%;
-  background: url("/assets/img/home-hero-bg.png") fixed;
-  background-size: cover;
-  background-position: fixed;
+}
+
+.text-center {
+  text-align: center;
 }

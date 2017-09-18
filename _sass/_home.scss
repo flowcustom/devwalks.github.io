@@ -2,13 +2,47 @@
 // Hero Section
 
 .home-hero {
-  background: url('/assets/img/home-hero-bg.png') fixed;
-  background-size: cover;
-  background-position: fixed;
-  padding: 120px 30px 200px;
+  background-image: linear-gradient(45deg, #2E3192 0%, #1BFFFF 100%);
+  padding: 160px 30px;
 
   @media screen and (max-width: $break-large) {
-    padding: 120px 30px 90px;
+    padding: 100px 0px 90px;
+  }
+}
+
+.hero-container {
+  max-width: 640px;
+  margin: 0px auto;
+  border: 15px solid #fff;
+  padding: 60px 40px;
+  text-align: center;
+
+  h1, p, a {
+    color: #fff;
+  }
+
+  .hero-title-top {
+    font-size: 64px;
+    line-height: 64px;
+    display: block;
+  }
+
+  .hero-title-mid {
+    font-size: 96px;
+    line-height: 84px;
+    display: block;
+  }
+
+  .hero-title-bottom {
+    display: block;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  p {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 2rem 0;
   }
 }
 
@@ -16,22 +50,50 @@
   padding: 120px 30px;
 }
 
-.process-section {
-  background: $light-grey;
+.creative-flex {
+  display: flex;
+  align-items: center;
 }
 
-.process-grid {
-  display: flex;
-  flex-wrap: wrap;
+.creative-image {
+  display: inherit;
+  position: relative;
+  left: -10%;
+}
 
-  @media screen and (max-width: $break-small) {
-    display: block;
+.process-section {
+  border-bottom: 10px solid #2C2C2C;
+}
+
+.process-cell {
+  margin-bottom: 2rem;
+
+  img {
+    display: inline-block;
+    margin: 0 10px 0 0;
   }
 
-  .process-item {
-    flex: 1;
-    margin-right: 50px;
-    margin-bottom: 50px;
+  h3 {
+    display: inline-block;
+    position: relative;
+    bottom: 12px;
+    margin-bottom: 0px;
+  }
+
+  p {
+    margin-left: 48px;
+  }
+}
+
+.home-list {
+  list-style-image: url('https://res.cloudinary.com/devwalks/image/upload/v1505714999/list-img_njxjjo.png');
+  
+  padding-left: 1.5rem;
+  margin: 40px 0;
+
+  li {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -80,69 +142,52 @@
   }
 }
 
-.home-compare {
-  background: $light-grey;
+.home-featured-article {
+  background-image: url('https://res.cloudinary.com/devwalks/image/upload/v1505179890/early-projects-index_hdsfur.png');
+  background-size: cover;
+  background-position: top;
+  position: relative;
 
-  .compare-item.compare-title {
-    @media screen and (max-width: $break-small) {
-      display: none;
-    }
+  .dark-overlay {
+    background-color: rgba(41,41,44,0.8);
   }
 
-  .compare-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 50px;
+  .featured-container {
+    padding: 100px 0;
+  }
 
-    h3, h2 {
-      font-weight: 300;
+  h2, p {
+    color: #fff;
+  }
 
-      @media screen and (max-width: $break-small) {
-        text-align: center;
-      }
-    }
+  h2 {
+    text-transform: uppercase;
+    font-size: 64px;
+    line-height: 58px;
+    margin-bottom: 0.5rem;
+  }
 
-    .standard-column {
-      flex: 1;
-      margin-right: 30px;
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
 
-      @media screen and (max-width: $break-small) {
-        margin-right: 0;
-      }
-    }
+  a {
+  }
+}
 
-    .devwalks-column {
-      flex: 1;
-      margin-left: 30px;
+.home-articles {
+  .section-header {
+    margin-bottom: 40px;
+  }
 
-      @media screen and (max-width: $break-small) {
-        margin-left: 0;
-      }
-    }
-
-    .devwalks-column.title-column {
-      margin-left: 151px;
-    }
-
-    .vs-column img {
-      width: 121px;
-
-      @media screen and (max-width: $break-small) {
-        width: 60px;
-        display: block;
-        margin: 10px auto;
-      }
-    }
-
-    @media screen and (max-width: $break-small) {
-      display: block;
-    }
+  p {
+    font-size: 1.2rem;
   }
 }
 
 .home-contact {
-  background-image: linear-gradient(-214deg, #83A6F6 0%, #364DA8 100%);
+  background-image: linear-gradient(45deg, #2E3192 0%, #1BFFFF 100%);
 
   h2 {
     @media screen and (max-width: $break-small) {
