@@ -65,6 +65,21 @@
   }
 }
 
+@media screen and (max-width: $break-small) {
+  .contact-us {
+    padding: 60px 20px 40px;
+
+    .flex-row {
+      display: block;
+    }
+
+    .info {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+}
+
 .thank-you {
   padding: 200px 0 100px;
 
@@ -83,6 +98,20 @@
     .card {
       margin-bottom: 30px;
     }
+  }
+}
+
+@media screen and (max-width: $break-small) {
+  h1 {
+    line-height: 1.2em;
+  }
+
+  .case-studies {
+    padding: 60px 20px 40px;
+  }
+
+  .card.card--link {
+    max-width: 100%;
   }
 }
 

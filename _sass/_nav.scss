@@ -20,6 +20,10 @@
       padding: 0 30px;
     }
 
+    @media screen and (max-width: $break-small) {
+      padding: 0 15px;
+    }
+
     .logo {
       color: #fff;
       font-weight: 500;
