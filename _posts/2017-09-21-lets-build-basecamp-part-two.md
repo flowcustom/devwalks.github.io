@@ -509,11 +509,11 @@ In the `app/views/project/create.js.erb` file, add the code below. Please read t
 
 ```javascript
 // Assign our project list, project_card view and a new empty div element to variables
-const projectList = document.getElementById('project-list')
+var projectList = document.getElementById('project-list')
 // Remember, this is an .erb file, so we do have access to Rails helpers in here. We can call the render method to render a partial here with no worries (just don't forget to escape the returned template or you'll bump into errors).
-const newProject = '<%= escape_javascript(render "project_card.html", project: @project) %>'
+var newProject = '<%= escape_javascript(render "project_card.html", project: @project) %>'
 // We have to create a new element in this way in order to get our newProject working as it should. jQuery would avoid this, but where's the fun in that.
-const div = document.createElement('div')
+var div = document.createElement('div')
 
 // Add our newProject string to the inner html of the empty div we just created
 div.innerHTML = newProject
@@ -552,10 +552,10 @@ We've successfully hidden the popover by using our `.is-hidden` class, so let's 
 In your `app/views/project/create.js.erb` file, update the code as seen here:
 
 ```javascript
-const projectList = document.getElementById('project-list')
-const projectPopover = document.getElementById('new-project-popover')
-const newProject = "<%= escape_javascript(render "project_card.html") %>"
-const div = document.createElement('div')
+var projectList = document.getElementById('project-list')
+var projectPopover = document.getElementById('new-project-popover')
+var newProject = "<%= escape_javascript(render 'project_card.html', project: @project) %>"
+var div = document.createElement('div')
 
 div.innerHTML = newProject
 
@@ -572,11 +572,11 @@ We're now ready to clear our project name input as well.  Let's go the easy rout
 We can now easily access this element from our javascript and empty the value.  Finally, update your `create.js.erb` file one last time as seen here to implement this feature:
 
 ```javascript
-const projectList = document.getElementById('project-list')
-const projectPopover = document.getElementById('new-project-popover')
-const projectNameInput = document.getElementById('project-name-input')
-const newProject = "<%= escape_javascript(render "project_card.html") %>"
-const div = document.createElement('div')
+var projectList = document.getElementById('project-list')
+var projectPopover = document.getElementById('new-project-popover')
+var projectNameInput = document.getElementById('project-name-input')
+var newProject = "<%= escape_javascript(render 'project_card.html', project: @project) %>"
+var div = document.createElement('div')
 
 div.innerHTML = newProject
 
