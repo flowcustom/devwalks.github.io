@@ -125,3 +125,27 @@ input, textarea {
     border: 1px solid $blue;
   }
 }
+
+.blog-post .availability-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-image: linear-gradient(45deg, #2E3192 0%, #1BFFFF 100%);
+  padding: 3rem;
+  margin-bottom: 2rem;
+
+  h2, p {
+    color: #fff;
+    text-align: center;
+  }
+
+  p {
+    font-weight: 300;
+    margin-bottom: 2rem;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
