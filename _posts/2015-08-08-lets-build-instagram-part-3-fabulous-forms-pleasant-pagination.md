@@ -610,6 +610,8 @@ Good?  Good.  It's worth noting what our ```link_to``` helper method is actually
 
 Ok, so we've got our link set up and we have some dynamically generated post.id's around the place so we can manipulate the correct items.  Let's now see what we're doing in our javascript.  I've stored this file in the standard javascripts folder, ```app/assets/javascripts``` and called it, ```loadMoreComments.js```.
 
+**This is for Rails 4:**
+
 ```javascript
 $( document ).ready(function() {
   $('.more-comments').click( function() {
@@ -622,6 +624,22 @@ $( document ).ready(function() {
 });
 
 ```
+
+**Are you using Rails 5?** Use this code instead:
+
+```javascript
+$( document ).ready(function() {
+  $('.more-comments').click( function() {
+    $(this).on('ajax:success', function(event) {
+      var postId = $(this).data("post-id");
+      $("#comments_" + postId).html(event.detail[2].responseText);
+      $("#comments-paginator-" + postId).html("<a id='more-comments' data-post-id=" + postId + "data-type='html' data-remote='true' href='/posts/" + postId + "/comments>show more comments</a>");
+    });
+  });
+});
+```
+
+Remember, if you have any issues, please leave me a comment below this article and I'll help out!
 
 I'm going to humour you and run through this line by line.  If you don't need me to, just skip the dot points below and bask in your smugness.
 
