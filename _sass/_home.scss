@@ -58,13 +58,17 @@
     }
 
     .hero-title-mid {
-      font-size: 64px;
-      line-height: 56px;
+      font-size: 56px;
+      line-height: 48px;
     }
 
     .hero-title-bottom {
       font-size: 24px;
       line-height: 24px;
+    }
+
+    a {
+      font-size: 12px;
     }
 
     p {
@@ -296,6 +300,18 @@
 
     img {
       width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: $break-small) {
+  .home-section {
+    .section-header {
+      font-size: 36px;
+    }
+
+    .section-subheading {
+      font-size: 18px;
     }
   }
 }
