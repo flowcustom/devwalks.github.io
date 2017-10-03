@@ -48,7 +48,7 @@ ___
 
 I think that directly copying another product in order to profit from it is super dumb for many, many reasons, but emulating another product for the sake of learning is actually incredibly fun and rewarding.
 
-It's how I learn to code!
+It's how I learnt to code!
 
 In this series, we're re-creating a very small part of Basecamps functionality in order to *learn*, not to clone their business model and be horrible people.  Cloning another business is also a terrible way to start a business for what it's worth, so don't do that.
 
