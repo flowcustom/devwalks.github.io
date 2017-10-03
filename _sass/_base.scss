@@ -149,3 +149,21 @@ input, textarea {
     text-decoration: none;
   }
 }
+
+@media screen and (max-width: $break-small) {
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .blog-post .availability-block {
+    p, a {
+      font-size: 12px;
+      line-height: 16px;
+      margin-bottom: 0;
+    }
+
+    a {
+      margin-top: 1rem;
+    }
+  }
+}

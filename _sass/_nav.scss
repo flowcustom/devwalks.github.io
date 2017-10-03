@@ -12,16 +12,13 @@
     margin: 10px 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-direction: row;
     color: #fff;
     font-weight: 300;
 
     @media screen and (max-width: $break-large) {
       padding: 0 30px;
-    }
-
-    @media screen and (max-width: $break-small) {
-      padding: 0 15px;
     }
 
     .logo {
@@ -54,6 +51,15 @@
 
     .logo, .navbar__link {
       color: #2C2C2C;
+    }
+  }
+}
+
+@media screen and (max-width: $break-small) {
+  .navbar .navbar__wrap {
+    padding: 0 15px;
+    .navbar__link {
+      font-size: 12px;
     }
   }
 }

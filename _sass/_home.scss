@@ -306,8 +306,13 @@
 
 @media screen and (max-width: $break-small) {
   .home-section {
+    .process-content {
+      margin-top: 3rem;
+    }
     .section-header {
       font-size: 36px;
+      line-height: 38px;
+      margin-bottom: 1.5rem;
     }
 
     .section-subheading {
