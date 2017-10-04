@@ -38,8 +38,8 @@
   a.blog-preview {
     margin-bottom: 30px;
 
-    &:hover h4, &:hover p {
-      text-transform: none;
+    &:hover {
+      text-decoration: none;
     }
   }
 }
