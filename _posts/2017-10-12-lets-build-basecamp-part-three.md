@@ -315,7 +315,7 @@ Start by creating our new partial view in `app/views/project/_feature_card.html.
 <div class="col-md-4">
   <a class="feature-card" href="<%= feature_link %>"> 
     <h4><%= title %></h4>
-    <img src="<%= img_src %>" alt="<%= img_alt %>"></img>
+    <img src="<%= image_url(img_src) %>" alt="<%= img_alt %>"></img>
     <p><%= description %></p>
   </a>
 </div>
