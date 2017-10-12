@@ -6,7 +6,7 @@ permalink: /ruby-on-rails-tutorial-lets-build-basecamp-2/
 categories: ruby-on-rails-tutorial basecamp
 feature_image: /assets/img/posts/basecamp-2/deleting-is-hidden.png
 thumbnail: https://res.cloudinary.com/devwalks/image/upload/c_scale,q_auto:eco,w_240/v1505952623/deleting-is-hidden_d24cza.png
-description: "Ruby on Rails Tutorial. Let's build Basecamp with Ruby on Rails 5.1 - PART TWO"
+description: "Ruby on Rails Tutorial. Let's build Basecamp with Ruby on Rails 5.1 - Part Three"
 id: 2
 ---
 <sub class='blog-date'>{{ page.published }}</sub>
