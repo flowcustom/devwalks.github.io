@@ -57,3 +57,21 @@ button {
     color: #fff;
   }
 }
+
+// LANDING PAGE BUTTONS
+.button {
+  border-radius: 24px;
+  padding: 8px 24px;
+  transition: box-shadow cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  &:hover {
+    text-decoration: none;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  }
+}
+
+.button.is-primary {
+  background-color: #3185FC;
+  color: #fff;
+  font-weight: bold;
+}

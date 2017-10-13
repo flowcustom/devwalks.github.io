@@ -1,0 +1,162 @@
+// WHITE LANDING PAGE DEVWALKS LOGO
+.landing-logo {
+  display: block;
+  height: 30px;
+  margin: 20px 0 120px;
+}
+
+// MAIN HERO SECTION FOR LANDING PAGES
+.landing-hero {
+  padding: 0 0 240px;
+
+  &::before {
+    z-index: -1;
+    content: "";
+    height: 640px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transform: skewY(-5deg);
+    transform-origin: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    background: url("/assets/img/landing/hero-background.png") top center no-repeat;
+    background-size: cover;
+  }
+
+  .landing-hero__title {
+    font-size: 64px;
+    line-height: 64px;
+    color: #fff;
+  }
+}
+
+// LANDING PAGE FEATURES LIST WITH IMAGES
+.landing-features {
+  .columns {
+    margin: 0 0 80px;
+  }
+
+  .text-left {
+    margin-right: 60px;
+  }
+
+  h2 {
+    line-height: 115%;
+  }
+
+  p {
+    margin: 0 0 1rem;
+  }
+}
+
+// LANDING PAGE GIVE-AWAY SECTION
+.landing-giveaway {
+  position: relative;
+  margin-bottom: 160px;
+  padding-top: 120px;
+
+  &::before {
+    z-index: -1;
+    content: "";
+    height: 640px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transform: skewY(2deg);
+    transform-origin: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    background: url("/assets/img/landing/hero-background.png") top center no-repeat;
+    background-size: cover;
+  }
+
+  h2 {
+    text-align: center;
+    color: #fff;
+    line-height: 125%;
+  }
+
+  p, ul {
+    color: #fff;
+  }
+
+  img {
+    width: 240px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .button {
+    display: inline-block;
+    margin-top: 24px;
+  }
+}
+
+// ABOUT ME LANDING PAGE SECTION
+.landing-about-me {
+  padding-bottom: 80px;
+
+  h2 {
+    line-height: 115%;
+  }
+
+  p {
+    margin: 0 0 1rem;
+  }
+
+  .profile-picture {
+    text-align: center;
+  }
+
+  img {
+    width: 180px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+// LANDING PAGE CONTACT US SECTION
+.landing-enquiry {
+  background: #29333D;
+  padding: 80px 0;
+
+  h3, p {
+    color: #fff;
+  }
+
+  input {
+    display: inline-block;
+    width: 240px;
+    height: 24px;
+    border: 0;
+    border-bottom: 1px dashed #fff;
+    margin: 0 0 16px;
+    padding: 0 16px 0 0;
+    font-weight: bold;
+    color: #fff;
+
+    &:focus {
+      border: 0 solid transparent;
+    }
+  }
+
+  .button {
+    display: inline-block;
+    margin-top: 24px;
+  }
+}
+
+// LANDING PAGE QUOTE SECTION
+.landing-quote {
+  padding: 80px 0;
+
+  blockquote {
+    text-align: center;
+
+    strong {
+      display: block;
+      margin-top: 24px;
+    }
+  }
+}
