@@ -312,7 +312,7 @@ To my eyes, this looks like a great opportunity to use a partial view for each o
 Start by creating our new partial view in `app/views/project/_feature_card.html.erb` like so:
 
 ```erb
-<div class="col-md-4">
+<div class="col-md-4 feature-col">
   <a class="feature-card" href="<%= feature_link %>"> 
     <h4><%= title %></h4>
     <img src="<%= image_url(img_src) %>" alt="<%= img_alt %>"></img>
