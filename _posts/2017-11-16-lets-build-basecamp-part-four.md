@@ -63,7 +63,7 @@ Now all that's left to do is to let our router know what we want.  In your route
 Rails.application.routes.draw do
   get 'projects', to: 'project#index'
   get 'projects/:id', to: 'project#show', as: 'project'
-  get 'projects/:id/chat', to: 'project#chat' # OUR NEW ROUTE!
+  get 'projects/:id/chat', to: 'project#chat', as: 'project_chat' # OUR NEW ROUTE!
   post 'projects', to: 'project#create'
 end
 ```
