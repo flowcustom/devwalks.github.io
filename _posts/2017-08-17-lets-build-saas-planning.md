@@ -282,3 +282,6 @@ These are some of the tactics I use when working on my own client or personal pr
 Until next time!
 
 Ben
+
+p.s. If you'd like to learn moreabout using the jobs-to-be-done process for creating innovative products, please 
+check out this interview with Karen Dillon on thisisproductmanagement.com: [Jobs to be done interview](https://www.thisisproductmanagement.com/episodes/jobs-to-be-done/)
