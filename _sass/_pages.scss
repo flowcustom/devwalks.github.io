@@ -1,10 +1,11 @@
 @import "colours";
 
 .section-header {
-  color: $blue;
+  color: $body;
   font-size: 64px;
   line-height: 58px;
   margin-bottom: 0;
+  margin-bottom: 40px;
 }
 
 .page-header {
@@ -267,4 +268,12 @@
       font-size: 1rem;
     }
   }
+}
+
+.confetti-bg {
+  background-color: $blue;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
