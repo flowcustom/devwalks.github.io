@@ -262,6 +262,15 @@
     display: block;
   }
 
+  .lead-magnet .flex-row {
+    display: block;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
   .form, .info {
     flex: none;
     width: 100%;
