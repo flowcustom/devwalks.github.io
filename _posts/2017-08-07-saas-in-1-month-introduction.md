@@ -121,7 +121,7 @@ What we should be interested in is:
 - What slang do they use? What words do they use to describe their problems?
 - Any other items of interest that seem like they might be useful.
 
-You do this research for hours and hours until something just "clicks".
+You do this research for hours and hours until the you start finding recurring issues that you have the unique ability to solve. Please refer to Alex's comments below this article for extra context regarding the whole process (Alex is one of the co-creators of 30x500!).
 
 ![Research!](/assets/img/posts/research.png)
 
