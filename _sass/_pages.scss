@@ -37,10 +37,32 @@
   }
 
   a.blog-preview {
+    max-width: 280px;
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: $body;
+
+    &:hover {
+      color: $blue;
+    }
+
+    .blog-preview__image {
+      min-height: 250px;
+      background-size: cover;
+    }
+
+    .blog-preview__content {
+      max-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
     &:hover {
       text-decoration: none;
+      box-shadow: 0 6px 40px 8px rgba(0,0,0,0.16);
     }
   }
 }

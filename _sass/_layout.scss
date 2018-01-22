@@ -4,6 +4,10 @@
 // Page Layout
 // 
 
+section.home {
+  padding: 60px 0;
+}
+
 .container {
   max-width: 920px;
   margin: 0px auto;
@@ -17,6 +21,7 @@
 .columns {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 
   .column {
     flex: 1;

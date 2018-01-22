@@ -2,7 +2,7 @@
 // Hero Section
 
 .home-hero {
-  background-image: url(https://res.cloudinary.com/devwalks/image/upload/v1512429338/devwalks-hero_2_1_exxeu9.png);
+  background-image: url(https://res.cloudinary.com/devwalks/image/upload/v1516584261/dw-bg_1_t2ueni.jpg);
   padding: 240px 30px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,8 +13,6 @@
 }
 
 .hero-container {
-  max-width: 640px;
-
   h1, p {
     color: #fff;
   }
@@ -80,273 +78,44 @@
   padding: 120px 30px;
 }
 
-.creative-flex {
-  display: flex;
-  align-items: center;
-}
-
-.creative-image {
-  display: inherit;
-  position: relative;
-  left: -10%;
-  width: 60%;
-}
-
-.tech-image {
-  width: 40%;
-  margin-left: 40px;
-}
-
-
-.what-section {
-  img {
-    margin: 40px auto;
-    width: 400px;
-  }
-}
-
-.process-cell {
-  margin-bottom: 2rem;
-
-  img {
-    display: inline-block;
-    margin: 0 10px 0 0;
-  }
-
-  h3 {
-    display: inline-block;
-    position: relative;
-    bottom: 12px;
-    margin-bottom: 0px;
-  }
-
-  p {
-    margin-left: 48px;
-  }
-}
-
-@media screen and (max-width: $break-large) {
-  .creative-flex {
-    display: block;
-  }
-
-  .creative-image {
-    display: block;
-    position: initial;
-    margin: 0 auto;
-    width: 80%;
-  }
-
-  .tech-image {
-    width: 80%;
-  }
-}
-
-.home-list {
-  list-style-image: url('https://res.cloudinary.com/devwalks/image/upload/v1505714999/list-img_njxjjo.png');
-  
-  padding-left: 1.5rem;
-  margin: 40px 0;
-
-  li {
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-  }
-}
-
-.heading-icon-group {
-  display: flex;
-  flex-direction: row;
-
-  img {
-    margin-left: 15px;
-  }
-}
-
-.home-why {
-  h4, p {
-    color: #fff;
-    text-align: center;
-  }
-
-  h4 {
-    margin-bottom: 20px;
-  }
-
-  p {
-    font-size: 0.8em;
-    font-weight: 300;
-  }
-}
-
-.home-featured-article {
-  background-image: url('https://res.cloudinary.com/devwalks/image/upload/v1505179890/early-projects-index_hdsfur.png');
-  background-size: cover;
-  background-position: top;
-  position: relative;
-
-  .dark-overlay {
-    background-color: rgba(41,41,44,0.8);
-  }
-
-  .featured-container {
-    padding: 100px 0;
-  }
-
-  h2, p {
-    color: #fff;
-  }
-
-  h2 {
-    text-transform: uppercase;
-    font-size: 64px;
-    line-height: 58px;
-    margin-bottom: 0.5rem;
-  }
-
-  p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-  }
-
-  a {
-  }
-}
-
-@media screen and (max-width: $break-large) {
-  .dark-overlay {
-    padding: 30px;
-  }
-}
-
-.home-articles {
-  .section-header {
-    margin-bottom: 40px;
-  }
-
-  p {
-    font-size: 1.2rem;
-  }
-}
-
-.home-contact {
-  background-color: #266DFF;
-  padding: 80px 30px;
-
-  h2 {
-    @media screen and (max-width: $break-small) {
-      text-align: center;
-    }
-  }
-
-  .form, .info {
-    flex: 1;
-  }
-
-  .info {
-    margin-left: 30px;
-
-    @media screen and (max-width: $break-small) {
-      margin-left: 0;
-    }
-
-    p {
-      margin-bottom: 18px;
-      font-weight: 400;
-    }
-  }
-}
-
-@media screen and (max-width: $break-small) {
-  .home-contact .flex-row {
-    display: block;
-  }
-
-  .lead-magnet .flex-row {
-    display: block;
-
-    img {
-      display: block;
-      margin: 0 auto;
-    }
-  }
-
-  .form, .info {
-    flex: none;
-    width: 100%;
-    margin-bottom: 30px;
-    display: block;
-  }
-}
-
-.home-blog {
-  background: $light-grey;
-
-  .flex-row {
-    justify-content: space-between;
-  }
-}
-
-.blog-preview {
-  width: 280px;
-  padding: 20px;
-  text-decoration: none;
-  color: $body;
-  transition: box-shadow 0.68s, color 0.3s;
-
-  p {
-    margin-top: 20px;
-    font-weight: 300;
-    color: $grey;
-  }
-
-  &:hover {
-    color: $blue;
-  }
-
-  @media screen and (max-width: $break-large) {
-    width: 100%;
-    margin-bottom: 30px;
+.home-series {
+  .card {
     display: flex;
+    max-width: 45%;
     flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
 
-    img {
+    .card-image {
+      height: 250px;
+    }
+
+    .card-image.instagram {
+      background: url(https://res.cloudinary.com/devwalks/image/upload/v1505180726/Screen-Shot-2015-07-16-at-11-23-20-pm_gsmymy.png) no-repeat center center;
+      background-size: cover;
+    }
+    
+    .card-image.basecamp {
+      background: url(https://res.cloudinary.com/devwalks/image/upload/v1507771960/static-project-page_dtbpiu.png) no-repeat center center;
+      background-size: cover;
+    }
+
+    h3 {
+      margin-top: 16px;
+    }
+
+    .button {
+      display: block;
       width: 100%;
     }
   }
-}
 
-@media screen and (max-width: $break-small) {
-  .home-section {
-    .process-content {
-      margin-top: 3rem;
-    }
-    .section-header {
-      font-size: 36px;
-      line-height: 38px;
-      margin-bottom: 1.5rem;
-    }
-
-    .section-subheading {
-      font-size: 18px;
-    }
+  .view-all {
+    display: inline-block;
+    margin-top: 40px;
   }
 }
 
-.lead-magnet {
-  background-color: #266DFF;
-  padding: 80px 40px;
-
-  h2 {
-    margin-bottom: 0;
-  }
-
-  .magnet-copy {
-    padding: 40px;
-    background-color: #fff;
-  }
-
-  img {
-    min-width: 400px;
-  }
+.home-opt-in {
+  background: #010101;
 }

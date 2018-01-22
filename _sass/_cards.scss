@@ -4,10 +4,8 @@
 .card {
   background: #FFFFFF;
   transition: box-shadow 0.68s;
-  padding: 15px;
-  &:hover {
-    box-shadow: 0 24px 24px 0 rgba(0,0,0,0.20);
-  }
+  padding: 24px;
+  box-shadow: 0 4px 40px 4px rgba(0,0,0,0.08);
 }
 
 .card--hero {
