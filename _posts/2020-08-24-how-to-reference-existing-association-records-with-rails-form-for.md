@@ -2,11 +2,12 @@
 title: "How To Reference Existing Association Data With Rails form_for "
 layout: post
 permalink: /how-to-reference-existing-association-records-with-rails-form-for/
-published: 17 February 2016
-category: instagram tech
+published: 24 August 2020
+category: rails
 description: How to refence separate model association data with Rails form_for form method
 id: 21
 ---
+
 <sub class='blog-date'>{{ page.published }}</sub>
 
 This is a techy post as I'm going to start sharing some of the day to day things that I uncover while working on client projects in the hope that it helps other developers.
